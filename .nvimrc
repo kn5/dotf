@@ -54,7 +54,9 @@ if dein#load_state(s:dein_dir)
   call dein#add('davidhalter/jedi-vim', {'on_ft' : 'python'})
   call dein#add('tpope/vim-surround')
   call dein#add('kien/rainbow_parentheses.vim')
-"  call dein#add('nathanaelkane/vim-indent-guides')
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+" call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('scrooloose/syntastic')
 " colorschemes...
   call dein#add('tomasr/molokai')
@@ -70,6 +72,10 @@ if dein#load_state(s:dein_dir)
   call dein#add('vim-scripts/newspaper.vim')
   call dein#add('larssmit/vim-getafe')
   call dein#add('itchyny/landscape.vim')
+  call dein#add('sonjapeterson/1989.vim')
+  call dein#add('zeis/vim-kolor')
+" for evernote
+  call dein#add('kakkyz81/evervim')
 
   call dein#end()
 endif
@@ -91,7 +97,9 @@ command! DeinClean :call s:deinClean()
 "カラースキーマの指定
 "数字の色がみにくいので変更
 autocmd ColorScheme * highlight Number ctermfg=199
-colorscheme monokai
+
+"colorscheme monokai
+"colorscheme 1989
 "colorscheme cobalt
 "colorscheme seoul256 
 "colorscheme tender
@@ -111,9 +119,11 @@ set number
 set ruler
 set cmdheight=1
 set laststatus=2
+"set showtabline=2
 set statusline=[%n]
 set statusline+=%<%F\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set notitle 
+"set noshowmode 
 set nowildmenu
 "Tab保管をbashに似ているやつにする.
 set wildmode=longest,list
@@ -132,7 +142,7 @@ set hidden
 set list
 " タブと行の続きを可視化する
 hi SpecialKey ctermfg=darkmagenta
-set listchars=extends:<,tab:>-
+set listchars=extends:<,tab:>+
 "対応する括弧やブレースを表示する.
 set showmatch
 "タブ入力を複数の空白入力に置き換える
@@ -373,5 +383,14 @@ let g:indent_guides_guide_size = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=240
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=245
 let g:syntastic_python_checkers = ['pyflakes', 'pep8']
+let g:airline_themes = 'qwq'
+let g:airline_powerline_fonts = 1
+let g:evervim_devtoken="S=s494:U=a39e2b5:E=16423742fa3:C=15ccbc30270:P=1cd:A=en-devtoken:V=2:H=b488bc791e671282ff01b2a7958417cf"
+" For EverVim
+nnoremap <Space>l :EvervimNotebookList<CR>
+nnoremap <Space>s :EvervimNoteByQuery<Space>
+nnoremap <Space>c :EvervimCreateNote<CR>
+nnoremap <Space>t :EvervimListTags<CR>
 
+colorscheme kolor
 filetype on
