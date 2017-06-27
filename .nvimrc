@@ -8,7 +8,7 @@ endif
 set nobackup
 filetype off
 
-"function definition for dein.vim
+" 関数定義
 "Deoplete:
 function! DeopleteConfig()
   call deoplete#custom#set('_', 'converters', ['converter_auto_paren', 'converter_remove_overlap'])
@@ -23,7 +23,9 @@ function! DeopleteConfig()
   call deoplete#custom#set('vim', 'disabled_syntaxes', ['Comment'])
 endfunction
 
-"dein.vim setting
+" ******************
+" dein.vim 関連 
+" ******************
 let s:dein_dir = expand('~/.config/nvim/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
@@ -58,6 +60,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('vim-airline/vim-airline-themes')
 " call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('scrooloose/syntastic')
+
 " colorschemes...
   call dein#add('tomasr/molokai')
   call dein#add('sickill/vim-monokai')
@@ -74,6 +77,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('itchyny/landscape.vim')
   call dein#add('sonjapeterson/1989.vim')
   call dein#add('zeis/vim-kolor')
+
 " for evernote
   call dein#add('kakkyz81/evervim')
 
@@ -110,7 +114,9 @@ autocmd ColorScheme * highlight Number ctermfg=199
 "colorscheme crunchbang
 "colorscheme landscape
 
-"途中経過非描写
+" ******************
+" 設定あれこれ
+" ******************
 set lazyredraw
 set t_Co=256
 set tags=~/.tags
@@ -186,9 +192,8 @@ autocmd VimEnter,Colorscheme * highlight IndentGuidesEven term=bold ctermfg=dark
 autocmd VimEnter,Colorscheme * highlight IndentGuidesOdd term=bold ctermfg=darkgrey
 " grep検索の実行後にQuickFix Listを表示する
 autocmd QuickFixCmdPost *grep* cwindow
-" http://blog.remora.cx/2010/12/vim-ref-with-unite.html
 """"""""""""""""""""""""""""""
-" Unit.vimの設定
+" Unite.vimの設定
 """"""""""""""""""""""""""""""
 " 入力モードで開始する
 let g:unite_enable_start_insert=1
@@ -211,7 +216,6 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 """"""""""""""""""""""""""""""
 
-" http://inari.hatenablog.com/entry/2014/05/05/231307
 """"""""""""""""""""""""""""""
 " 全角スペースの表示
 """"""""""""""""""""""""""""""
@@ -227,57 +231,6 @@ if has('syntax')
 	augroup END
 	call ZenkakuSpace()
 endif
-""""""""""""""""""""""""""""""
-" 挿入モード時、ステータスラインの色を変更
-""""""""""""""""""""""""""""""
-let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=black ctermbg=yellow cterm=none'
-let g:hi_insert2 = 'highlight ModeMsg guifg=darkblue guibg=darkyellow gui=none ctermfg=black ctermbg=yellow cterm=bold'
-let g:hi_replace = 'highlight StatusLine guifg=white guibg=red gui=none ctermfg=white ctermbg=161 cterm=none'
-let g:hi_replace2 = 'highlight ModeMsg guifg=darkblue guibg=darkyellow gui=none ctermfg=white ctermbg=161 cterm=bold'
-let g:hi_visual = 'highlight StatusLine guifg=white guibg=red gui=none ctermfg=16 ctermbg=106 cterm=none'
-let g:hi_visual2 = 'highlight ModeMsg guifg=darkblue guibg=darkyellow gui=none ctermfg=16 ctermbg=106 cterm=bold'
-
-if has('syntax')
-	augroup InsertHook
-		autocmd!
-		autocmd InsertEnter * call s:StatusLine(v:insertmode)
-		autocmd InsertLeave * call s:StatusLine('Leave')
-	augroup END
-endif
-
-let s:slhlcmd = ''
-"let s:slhlcmd2 = ''
-function! s:StatusLine(mode)
-	if a:mode == 'i'
-		silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
-		"silent! let s:slhlcmd2 = 'highlight ' . s:GetHighlight('ModeMsg')
-		silent exec g:hi_insert
-		"silent exec g:hi_insert2
-	elseif a:mode == 'r'
-		silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
-		"silent! let s:slhlcmd2 = 'highlight ' . s:GetHighlight('ModeMsg')
-		silent exec g:hi_replace
-		"silent exec g:hi_replace2
-	elseif a:mode == 'v'
-		silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
-		"silent! let s:slhlcmd2 = 'highlight ' . s:GetHighlight('ModeMsg')
-		silent exec g:hi_visual
-		"silent exec g:hi_visual2
-	else
-		highlight clear StatusLine
-		silent exec s:slhlcmd
-	endif
-endfunction
-
-function! s:GetHighlight(hi)
-  redir => hl
-  exec 'highlight '.a:hi
-  redir END
-  let hl = substitute(hl, '[\r\n]', '', 'g')
-  let hl = substitute(hl, 'xxx', '', '')
-  return hl
-endfunction
-""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
 " 最後のカーソル位置を復元する
