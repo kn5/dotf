@@ -60,6 +60,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('vim-airline/vim-airline-themes')
 " call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('scrooloose/syntastic')
+  call dein#add('lervag/vimtex')
 
 " colorschemes...
   call dein#add('tomasr/molokai')

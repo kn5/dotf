@@ -8,6 +8,8 @@ end
 
 set -x theme_nerd_fonts yes
 set -x TERM xterm-256color
+set -x BROWSER open
+set -x BROWSER /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 fish_vi_key_bindings
 
 alias mv='mv -i'
