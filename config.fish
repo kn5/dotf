@@ -16,8 +16,10 @@ fish_vi_key_bindings
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
+alias v=nvim
 alias vim='nvim'
 alias sc='screen'
+alias ps='ps --sort=start_time'
 alias ps='ps --sort=start_time'
 
 alias mecabi='mecab -d /Users/kengo-ue/local/lib/mecab/dic/mecab-ipadic-neologd -F"%f[6] " -U"%m " -E"\n" -b 819200'
