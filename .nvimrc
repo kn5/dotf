@@ -3,8 +3,9 @@ set encoding=utf-8
 scriptencoding utf-8
 
 if &compatible
-  set nocompatible
+  set nocompatible " Be iMproved
 endif
+
 set nobackup
 filetype off
 
@@ -59,7 +60,8 @@ if dein#load_state(s:dein_dir)
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
 " call dein#add('nathanaelkane/vim-indent-guides')
-  call dein#add('scrooloose/syntastic')
+" call dein#add('scrooloose/syntastic')
+  call dein#add('w0rp/ale')
   call dein#add('lervag/vimtex')
 
 " colorschemes...
@@ -104,18 +106,6 @@ command! DeinClean :call s:deinClean()
 "カラースキーマの指定
 "数字の色がみにくいので変更
 autocmd ColorScheme * highlight Number ctermfg=199
-
-"colorscheme monokai
-"colorscheme 1989
-"colorscheme cobalt
-"colorscheme seoul256 
-"colorscheme tender
-"colorscheme mourning
-"colorscheme SerialExperimentsLain
-"colorscheme FlatColor
-"colorscheme eldar
-"colorscheme crunchbang
-"colorscheme landscape
 
 " ******************
 " 設定あれこれ
