@@ -6,6 +6,11 @@ if &compatible
   set nocompatible " Be iMproved
 endif
 
+" No use Japanese language message
+if has("multi_lang")
+  language C
+endif
+
 set nobackup
 filetype off
 
@@ -61,7 +66,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('vim-airline/vim-airline-themes')
 " call dein#add('nathanaelkane/vim-indent-guides')
 " call dein#add('scrooloose/syntastic')
-  call dein#add('w0rp/ale')
+" call dein#add('w0rp/ale')
   call dein#add('lervag/vimtex')
 
 " colorschemes...

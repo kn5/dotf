@@ -10,10 +10,15 @@ set -x theme_nerd_fonts yes
 set -x TERM xterm-256color
 set -x BROWSER open
 set -x BROWSER /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+set --erase fish_greeting
 
 set -g theme_color_scheme zenburn
 set fish_greeting ""
 fish_vi_key_bindings
+
+set -x PYENV_ROOT $HOME/.pyenv
+set -x PATH $PYENV_ROOT/bin/ $PATH
+set -x TERM xterm-256color
 
 alias mv='mv -i'
 alias rm='rm -i'
@@ -64,4 +69,14 @@ function cd
     end
     ls
     return $status
+end
+
+alias tmux="tmux -2 new-session"
+alias phi=peco_select_history
+
+eval (pyenv init - | source)
+eval (pyenv virtualenv-init - | source)
+
+if not [ $TMUX ]
+  tmux
 end
