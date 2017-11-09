@@ -69,6 +69,8 @@ if dein#load_state(s:dein_dir)
 " call dein#add('scrooloose/syntastic')
 " call dein#add('w0rp/ale')
   call dein#add('lervag/vimtex')
+  call dein#add('ryanoasis/vim-devicons')
+  call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
 
 " colorschemes...
   call dein#add('tomasr/molokai')
@@ -294,6 +296,9 @@ let g:rbpt_colorpairs = [
       \ ['White',         '#c0c0c0'],
       \ ]
 let g:rbpt_max = 21
+
+" フォルダアイコンの表示をON
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 let g:deoplete#enable_at_startup = 1
 let g:python_highlight_all = 1
