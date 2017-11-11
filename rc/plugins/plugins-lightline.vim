@@ -1,5 +1,4 @@
-let g:lightline = {
-        \ 'colorscheme': 'wombat',
+let g:lightline = { 'colorscheme': 'wombat',
         \ 'mode_map': {'c': 'NORMAL'},
         \ 'active': {
         \   'left': [
@@ -7,9 +6,9 @@ let g:lightline = {
         \     ['fugitive', 'gitgutter', 'filename'],
         \   ],
         \   'right': [
-        \     ['lineinfo'],
+        \     ['lineinfo', 'syntastic'],
         \     ['percent'],
-        \     ['fileformat', 'fileencoding', 'filetype'],
+        \     ['charcode', 'fileformat', 'fileencoding', 'filetype'],
         \   ]
         \ },
         \ 'component_function': {
