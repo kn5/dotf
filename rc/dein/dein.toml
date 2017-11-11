@@ -30,13 +30,17 @@ hook_source = 'source ~/.config/nvim/rc/plugins/plugins-vim-devicons.vim'
 repo = 'kien/rainbow_parentheses.vim'
 hook_source = 'source ~/.config/nvim/rc/plugins/plugins-rainbow_parentheses.vim'
 
-[[plugins]]
-repo = 'vim-airline/vim-airline'
-depends = ['vim-airline-themes']
-hook_source = 'source ~/.config/nvim/rc/plugins/plugins-vim-airline.vim'
+# [[plugins]]
+# repo = 'vim-airline/vim-airline'
+# depends = ['vim-airline-themes']
+# hook_source = 'source ~/.config/nvim/rc/plugins/plugins-vim-airline.vim'
+
+# [[plugins]]
+# repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
-repo = 'vim-airline/vim-airline-themes'
+repo = 'itchyny/lightline.vim'
+hook_source = 'source ~/.config/nvim/rc/plugins/plugins-lightline.vim'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
@@ -44,3 +48,10 @@ repo = 'cespare/vim-toml'
 # [[plugins]]
 # repo = 'Shougo/vimshell.vim'
 # hook_source = 'source ~/.config/nvim/rc/plugins/plugins-vimshell.vim'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_source = 'source ~/.config/nvim/rc/plugins/plugins-vim-fugitive.vim'
