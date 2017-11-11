@@ -38,6 +38,9 @@ hook_source = 'source ~/.config/nvim/rc/plugins/plugins-vim-airline.vim'
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
+[[plugins]]
+repo = 'cespare/vim-toml'
+
 # [[plugins]]
 # repo = 'Shougo/vimshell.vim'
 # hook_source = 'source ~/.config/nvim/rc/plugins/plugins-vimshell.vim'
