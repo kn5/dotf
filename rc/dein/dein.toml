@@ -14,7 +14,17 @@ if = 'has("nvim")'
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
-repo = 'kballard/vim-fish'
+repo = 'scrooloose/nerdtree'
+hook_source = 'source ~/.config/nvim/rc/plugins/plugins-nerdtree.vim'
+
+[[plugins]]
+repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
+on_source = ['nerdtree']
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+on_source = ['nerdtree']
+hook_source = 'source ~/.config/nvim/rc/plugins/plugins-vim-devicons.vim'
 
 [[plugins]]
 repo = 'kien/rainbow_parentheses.vim'
@@ -27,3 +37,7 @@ hook_source = 'source ~/.config/nvim/rc/plugins/plugins-vim-airline.vim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
+
+# [[plugins]]
+# repo = 'Shougo/vimshell.vim'
+# hook_source = 'source ~/.config/nvim/rc/plugins/plugins-vimshell.vim'

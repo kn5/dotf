@@ -1,8 +1,4 @@
 [[plugins]]
-repo = 'Shougo/vimshell.vim'
-hook_source = 'source ~/.config/nvim/rc/plugins/plugins-vimshell.vim'
-
-[[plugins]]
 repo = 'Shougo/unite.vim'
 on_source = ['vimshell.vim']
 
@@ -13,6 +9,7 @@ on_ft = 'python'
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 if = 'has("nvim")'
+on_i = 1
 hook_source = 'source ~/.config/nvim/rc/plugins/plugins-deoplete.vim'
 
 [[plugins]]
@@ -23,19 +20,6 @@ on_source = ['deoplete.nvim']
 repo = 'Shougo/neosnippet'
 on_i = 1
 depends = ['neosnippet-snippets']
-
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_source = 'source ~/.config/nvim/rc/plugins/plugins-nerdtree.vim'
-
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-on_source = ['nerdtree']
-hook_source = 'source ~/.config/nvim/rc/plugins/plugins-vim-devicons.vim'
-
-[[plugins]]
-repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
-on_source = ['nerdtree']
 
 [[plugins]]
 repo = 'machakann/vim-sandwich'
