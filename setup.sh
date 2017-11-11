@@ -8,3 +8,4 @@ do
 done
 
 ln -s $HOME/dotf/.nvimrc $HOME/.config/nvim/init.vim
+mv $HOME/dotf/rc $HOME/.config/nvim/
