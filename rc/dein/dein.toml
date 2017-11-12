@@ -15,13 +15,13 @@ repo = 'roxma/nvim-yarp'
 if = '!has("nvim") && has("python3")'
 
 [[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
-if = '!has("nvim") && has("python3")'
-
-[[plugins]]
 repo = 'w0rp/ale'
 if = 'has("nvim") || (has("job") && has("channel") && has("timers"))'
 hook_add = 'source ~/.config/nvim/rc/plugins/plugins-ale.vim'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+if = '!has("nvim") && has("python3")'
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
