@@ -12,7 +12,7 @@ set -x BROWSER open
 set -x BROWSER /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 set --erase fish_greeting
 
-set -g theme_color_scheme zenburn
+set -g theme_color_scheme solarized
 set fish_greeting ""
 fish_vi_key_bindings
 
