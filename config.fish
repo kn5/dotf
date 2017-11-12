@@ -20,6 +20,7 @@ set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin/ $PATH
 set -x TERM xterm-256color
 
+alias vi='~/my_local/homebrew/bin/vim'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
