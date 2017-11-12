@@ -8,7 +8,7 @@ build = 'make'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
-if = 'has("nvim")'
+if = 'has("python3")'
 
 [[plugins]]
 repo = 'roxma/nvim-yarp'
