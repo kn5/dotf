@@ -1,4 +1,4 @@
-let g:lightline = { 'colorscheme': 'wombat',
+let g:lightline = { 'colorscheme': 'landscape',
         \ 'mode_map': {'c': 'NORMAL'},
         \ 'active': {
         \   'left': [
@@ -8,7 +8,7 @@ let g:lightline = { 'colorscheme': 'wombat',
         \   'right': [
         \     ['lineinfo', 'syntastic'],
         \     ['percent'],
-        \     ['charcode', 'fileformat', 'fileencoding', 'filetype'],
+        \     ['fileformat', 'fileencoding', 'filetype'],
         \   ]
         \ },
         \ 'component_function': {
@@ -87,7 +87,7 @@ function! MyGitGutter()
   let ret = []
   for i in [0, 1, 2]
     if hunks[i] > 0
-      call add(ret, symbols[i] . hunks[i])
+      call add(ret, symbols[i] . '[' . hunks[i] . ']')
     endif
   endfor
   return join(ret, ' ')

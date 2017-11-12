@@ -1,4 +1,10 @@
-let s:dein_dir = expand('~/.config/nvim/dein')
+if has('nvim')
+  let s:vim_root_dir = expand('~/.config/nvim')
+else
+  let s:vim_root_dir = expand('~/.vim')
+endif
+
+let s:dein_dir = s:vim_root_dir . '/dein'
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 if !isdirectory(s:dein_repo_dir)
@@ -13,7 +19,7 @@ if dein#load_state(s:dein_dir)
   let g:dein#cache_directory = $HOME . '/.cache/dein'
   call dein#begin(s:dein_dir)
 
-  let g:rc_dir    = expand('~/.config/nvim/rc')
+  let g:rc_dir    = s:vim_root_dir . '/rc'
   let s:toml      = g:rc_dir . '/dein/dein.toml'
   let s:lazy_toml = g:rc_dir . '/dein/dein_lazy.toml'
 

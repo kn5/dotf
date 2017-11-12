@@ -14,10 +14,8 @@ endif
 filetype off
 
 runtime! rc/init/*.vim
-runtime! rc/dein/*.vim
+runtime! rc/dein/*.vim "comment out if using no plugins
 
 syntax on
+colorscheme landscape
 filetype plugin indent on
-
-colorscheme brogrammer
-filetype on
