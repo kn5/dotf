@@ -3,12 +3,12 @@ let g:lightline = { 'colorscheme': 'landscape',
         \ 'active': {
         \   'left': [
         \     ['mode', 'paste'],
-        \     ['fugitive', 'gitgutter', 'filename'],
+        \     ['readonly', 'filename','fugitive', 'gitgutter'],
         \   ],
         \   'right': [
-        \     ['lineinfo', 'syntastic'],
-        \     ['percent'],
         \     ['fileformat', 'fileencoding', 'filetype'],
+        \     ['lineinfo', 'percent'],
+        \     ['ale'],
         \   ]
         \ },
         \ 'component_function': {
@@ -23,6 +23,7 @@ let g:lightline = { 'colorscheme': 'landscape',
         \   'syntastic': 'SyntasticStatuslineFlag',
         \   'charcode': 'MyCharCode',
         \   'gitgutter': 'MyGitGutter',
+        \   'ale': 'ALEGetStatusLine',
         \ },
         \ 'separator': {'left': '⮀', 'right': '⮂'},
         \ 'subseparator': {'left': '⮁', 'right': '⮃'}

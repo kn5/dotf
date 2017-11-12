@@ -48,5 +48,9 @@ set showcmd
 set browsedir=buffer
 " }}}
 
+" サインコラムを常に表示する
+:sign define dummy
+:execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+
 set vb
 set t_vb=
