@@ -1,56 +1,63 @@
 # Required:
 [[plugins]]
-repo = 'Shougo/dein.vim'
+repo      = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
+repo      = 'Shougo/vimproc.vim'
+build     = 'make'
 
 [[plugins]]
-repo = 'Shougo/denite.nvim'
-if = 'has("python3")'
+repo      = 'Shougo/denite.nvim'
+if        = 'has("python3")'
+
+# neovim emu for vim8.0+ {{{
+[[plugins]]
+repo      = 'roxma/nvim-yarp'
+if        = '!has("nvim") && has("python3")'
 
 [[plugins]]
-repo = 'roxma/nvim-yarp'
-if = '!has("nvim") && has("python3")'
+repo      = 'roxma/vim-hug-neovim-rpc'
+if        = '!has("nvim") && has("python3")'
+# }}}
+
+# linter 
+[[plugins]]
+repo      = 'w0rp/ale'
+if        = 'has("nvim") || (has("job") && has("channel") && has("timers"))'
+hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-ale.vim'
 
 [[plugins]]
-repo = 'w0rp/ale'
-if = 'has("nvim") || (has("job") && has("channel") && has("timers"))'
-hook_add = 'source ~/.config/nvim/rc/plugins/plugins-ale.vim'
+repo      = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
-if = '!has("nvim") && has("python3")'
+repo      = 'scrooloose/nerdtree'
+hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-nerdtree.vim'
+
+# git {{{
+[[plugins]]
+repo      = 'airblade/vim-gitgutter'
 
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+repo      = 'tpope/vim-fugitive'
+hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-vim-fugitive.vim'
+# }}}
+
+# plguins for view {{{
+[[plugins]]
+repo      = 'kien/rainbow_parentheses.vim'
+hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-rainbow_parentheses.vim'
 
 [[plugins]]
-repo = 'airblade/vim-gitgutter'
+repo      = 'ryanoasis/vim-devicons'
+hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-vim-devicons.vim'
 
 [[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = 'source ~/.config/nvim/rc/plugins/plugins-nerdtree.vim'
+repo      = 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 [[plugins]]
-repo = 'tpope/vim-fugitive'
-hook_add = 'source ~/.config/nvim/rc/plugins/plugins-vim-fugitive.vim'
+repo      = 'itchyny/lightline.vim'
+hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-lightline.vim'
 
 [[plugins]]
-repo = 'kien/rainbow_parentheses.vim'
-hook_add = 'source ~/.config/nvim/rc/plugins/plugins-rainbow_parentheses.vim'
-
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-hook_add = 'source ~/.config/nvim/rc/plugins/plugins-vim-devicons.vim'
-
-[[plugins]]
-repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-[[plugins]]
-repo = 'itchyny/lightline.vim'
-hook_add = 'source ~/.config/nvim/rc/plugins/plugins-lightline.vim'
-
-[[plugins]]
-repo = 'itchyny/landscape.vim'
+repo      = 'itchyny/landscape.vim'
+# }}}

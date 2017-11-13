@@ -1,30 +1,35 @@
 [[plugins]]
-repo = 'Shougo/unite.vim'
-on_source = ['vimshell.vim']
+repo        = 'Shougo/unite.vim'
+on_source   = ['vimshell.vim']
 
 [[plugins]]
-repo = 'davidhalter/jedi-vim'
-on_ft = 'python'
+repo        = 'davidhalter/jedi-vim'
+on_ft       = 'python'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-if = 'has("nvim") && has("python3")'
-on_i = 1
+repo        = 'Shougo/deoplete.nvim'
+if          = 'has("nvim") && has("python3")'
+on_i        = 1
 hook_source = 'source ~/.config/nvim/rc/plugins/plugins-deoplete.vim'
 
 [[plugins]]
-repo = 'zchee/deoplete-jedi'
-on_source = ['deoplete.nvim']
+repo        = 'zchee/deoplete-jedi'
+on_source   = ['deoplete.nvim']
 
 [[plugins]]
-repo = 'Shougo/neosnippet'
-on_i = 1
-depends = ['neosnippet-snippets']
+repo        = 'Shougo/neosnippet'
+on_i        = 1
+depends     = ['neosnippet-snippets']
 
 [[plugins]]
-repo = 'machakann/vim-sandwich'
-on_i = 1
+repo        = 'machakann/vim-sandwich'
+on_i        = 1
 
 [[plugins]]
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
+repo        = 'cespare/vim-toml'
+on_ft       = 'toml'
+
+[[plugins]]
+repo        = 'lervag/vimtex'
+on_ft       = 'tex'
+hook_source = 'source ~/.config/nvim/rc/plugins/plugins-vimtex.vim'
