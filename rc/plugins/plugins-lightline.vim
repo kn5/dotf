@@ -29,6 +29,7 @@ let g:lightline = { 'colorscheme': 'landscape',
         \ 'subseparator': {'left': '⮁', 'right': '⮃'}
         \ }
 
+
 function! MyModified()
   return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
 endfunction
@@ -62,7 +63,7 @@ function! MyFileformat()
 endfunction
 
 function! MyFiletype()
-  return winwidth('.') > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . (exists('*WebDevIconsGetFileTypeSymbol') ? ' ' . WebDevIconsGetFileTypeSymbol() : ''): 'no ft') : ''
 endfunction
 
 function! MyFileencoding()
