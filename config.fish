@@ -72,12 +72,11 @@ function cd
     return $status
 end
 
-alias tmux="tmux -2 new-session"
 alias phi=peco_select_history
 
 eval (pyenv init - | source)
 eval (pyenv virtualenv-init - | source)
 
 if not [ $TMUX ]
-  tmux
+  tmux -2 new-session
 end
