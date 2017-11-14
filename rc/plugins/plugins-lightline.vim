@@ -3,7 +3,8 @@ let g:lightline = { 'colorscheme': 'landscape',
         \ 'active': {
         \   'left': [
         \     ['mode', 'paste'],
-        \     ['readonly', 'filename','fugitive', 'gitgutter'],
+        \     ['readonly', 'filename'],
+        \     ['fugitive', 'gitgutter'],
         \   ],
         \   'right': [
         \     ['fileformat', 'fileencoding', 'filetype'],
