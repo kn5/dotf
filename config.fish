@@ -33,6 +33,8 @@ alias ps='ps --sort=start_time'
 alias mecabi='mecab -d /Users/kengo-ue/local/lib/mecab/dic/mecab-ipadic-neologd -F"%f[6] " -U"%m " -E"\n" -b 819200'
 alias mecabwakati='mecab -d /Users/kengo-ue/local/lib/mecab/dic/mecab-ipadic-neologd -Owakati -E"\n" -b 819200'
 
+alias todo='vim $HOME/.todo.md'
+
 status --is-interactive; and . (pyenv init -|psub)
 
 function cd
