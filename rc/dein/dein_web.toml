@@ -1,0 +1,7 @@
+[[plugins]]
+repo      = 'mattn/emmet-vim'
+hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-emmet-vim.vim'
+
+[[plugins]]
+repo      = 'tyru/open-browser.vim'
+hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-open-browser.vim'
