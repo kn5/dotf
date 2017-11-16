@@ -19,8 +19,7 @@ alias sc='screen'
 alias ps='ps --sort=start_time'
 
 alias mecabi='mecab -d /Users/kengo-ue/local/lib/mecab/dic/mecab-ipadic-neologd -F"%f[6] " -U"%m " -E"\n" -b 819200'
-alias mecabwakati='mecab -d /Users/kengo-ue/local/lib/mecab/dic/mecab-ipadic-neologd -Owakati -E"\n" -b 819200'
-
+alias mecabwakati='mecab -d /Users/kengo-ue/local/lib/mecab/dic/mecab-ipadic-neologd -Owakati -E"\n" -b 819200' 
 export PS1='\[\e[01;33m\]\D{%Y/%m/%d} \t \[\033[01;32m\]\u@\H\[\033[01;35m\] \w \$\[\033[00m\]\n'
 export PATH=$HOME/my_local/homebrew/bin:$PATH
 export PATH=$HOME/local/bin:$PATH
@@ -31,6 +30,7 @@ PYENV_ROOT=~/.pyenv
 export PATH=$PATH:$PYENV_ROOT/bin
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+export TERM=xterm-256color
 if [ -x "`which go`" ]; then
   export GOROOT=`go env GOROOT`
   export GOPATH=$HOME/code/go-local
