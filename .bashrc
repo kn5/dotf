@@ -25,10 +25,14 @@ export PS1='\[\e[01;33m\]\D{%Y/%m/%d} \t \[\033[01;32m\]\u@\H\[\033[01;35m\] \w 
 export PATH=$HOME/my_local/homebrew/bin:$PATH
 export PATH=$HOME/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2017/texmf-dist/doc/man
+export INFOPATH=/usr/local/texlive/2017/texmf-dist/doc/info
 export HOMEBREW_CACHE=$HOME/my_local/homebrew/cache
 export XDG_CONFIG_HOME=$HOME/.config
 PYENV_ROOT=~/.pyenv
 export PATH=$PATH:$PYENV_ROOT/bin
+export TERM=xterm-256color
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 if [ -x "`which go`" ]; then
@@ -36,3 +40,6 @@ if [ -x "`which go`" ]; then
   export GOPATH=$HOME/code/go-local
   export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 fi
+
+powerline-daemon -q
+. ~/.local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh

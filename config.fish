@@ -17,10 +17,13 @@ set fish_greeting ""
 fish_vi_key_bindings
 
 set -x PYENV_ROOT $HOME/.pyenv
-set -x PATH $PYENV_ROOT/bin/ $PATH
+set -x PATH $PYENV_ROOT/bin $PATH
+set -x PATH /usr/local/texlive/2017/bin/x86_64-linux $PATH
+set -x MANPATH /usr/local/texlive/2017/texmf-dist/doc/man
+set -x INFOPATH /usr/local/texlive/2017/texmf-dist/doc/info
 set -x TERM xterm-256color
 
-alias vi='~/my_local/homebrew/bin/vim'
+# alias vi='~/my_local/homebrew/bin/vim'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'

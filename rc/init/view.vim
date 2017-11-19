@@ -20,7 +20,7 @@ set cursorline       "現在行をハイライト
 set background=dark  "背景暗く
 set showmatch        "対応する括弧を表示
 set whichwrap=b,s,h,l,<,>,[,]
-set ambiwidth=single "特殊記号が崩れないように(For iTerm2)
+set ambiwidth=double "特殊記号が崩れないように(For iTerm2)
 
 function! ZenkakuSpace() "全角スペース可視化
 	highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
