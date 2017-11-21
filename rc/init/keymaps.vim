@@ -15,6 +15,8 @@ nnoremap ZZ <Nop>
 nnoremap ZQ <Nop>
 nnoremap Q <Nop>
 nnoremap <Space>/ *
+noremap ; :
+noremap : ;
 
 inoremap { {}<LEFT>
 inoremap ( ()<ESC>i
