@@ -1,2 +1,2 @@
 nnoremap <Space>n :NERDTreeToggle<Cr>
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
