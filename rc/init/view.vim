@@ -52,5 +52,7 @@ set browsedir=buffer
 :sign define dummy
 :execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
 
+autocmd ColorScheme * highlight Structure ctermfg=205 guifg=#008800
+
 set vb
 set t_vb=
