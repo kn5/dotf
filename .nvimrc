@@ -10,6 +10,9 @@ if has("multi_lang") | language C | endif
 
 filetype off
 
+"avoid error on Linux mint
+set guicursor=
+
 "Read sub-files
 runtime! rc/init/*.vim
 runtime! rc/dein/*.vim "comment out if using no plugins
