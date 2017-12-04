@@ -29,6 +29,10 @@ on_ft       = 'toml'
 repo        = 'kballard/vim-fish'
 on_ft       = 'fish'
 
+#[[plugins]]
+#repo        = 'kn5/Pretty-Vim-Python'
+#on_ft       = 'python'
+
 [[plugins]]
 repo        = 'tpope/vim-markdown'
 on_ft       = 'markdown'
