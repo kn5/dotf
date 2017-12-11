@@ -1,6 +1,7 @@
 # Required:
 [[plugins]]
 repo      = 'Shougo/dein.vim'
+hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-dein.vim'
 
 [[plugins]] repo      = 'Shougo/vimproc.vim'
 build     = 'make'
@@ -64,10 +65,17 @@ hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-vim-devicons.vim'
 repo      = 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 [[plugins]]
+repo      = 'itchyny/landscape.vim'
+hook_add  = 
+'''
+  aug MyColorScheme
+    au!
+    au VimEnter * nested colorscheme landscape
+  aug END
+'''
+
+[[plugins]]
 repo      = 'itchyny/lightline.vim'
 hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-lightline.vim'
 
-[[plugins]]
-repo      = 'itchyny/landscape.vim'
 # }}}
-
