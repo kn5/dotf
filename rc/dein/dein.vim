@@ -22,8 +22,10 @@ if dein#load_state(s:dein_dir)
   let g:rc_dir    = s:vim_root_dir . '/rc'
   let s:toml      = g:rc_dir . '/dein/dein.toml'
   let s:lazy_toml = g:rc_dir . '/dein/dein_lazy.toml'
+  let s:tex_toml = g:rc_dir . '/dein/dein_tex.toml'
 
   call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:tex_toml,  {'lazy': 0})
 "  call dein#load_toml(s:lazy_web, {'lazy': 1})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
 

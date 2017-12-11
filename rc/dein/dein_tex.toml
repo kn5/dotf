@@ -1,0 +1,4 @@
+[[plugins]]
+repo      = 'lervag/vimtex'
+on_ft     = 'plaintex'
+hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-vimtex.vim'

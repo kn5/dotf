@@ -2,8 +2,7 @@
 [[plugins]]
 repo      = 'Shougo/dein.vim'
 
-[[plugins]]
-repo      = 'Shougo/vimproc.vim'
+[[plugins]] repo      = 'Shougo/vimproc.vim'
 build     = 'make'
 
 [[plugins]]
@@ -71,3 +70,4 @@ hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-lightline.vim'
 [[plugins]]
 repo      = 'itchyny/landscape.vim'
 # }}}
+

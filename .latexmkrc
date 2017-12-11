@@ -1,16 +1,10 @@
-#!/usr/bin/env perl
-$latex = 'platex -guess-input-enc -src-specials -interaction=nonstopmode -synctex=1';
-$latex_silent = 'platex -interaction=batchmode';
-$dvips = 'dvips';
+#!/usr/bin/perl
+$latex = 'platex -kanji=utf-8 -synctex=1 %S';
+$dvipdf = 'dvipdfmx %S';
 $bibtex = 'pbibtex';
-$makeindex = 'mendex -r -c -s jind.ist';
-$dvi_previewer = 'start dviout'; # -pv option
-$dvipdf = 'dvipdfmx %O -o %D %S';
-if ($^O eq 'darwin') {
-    $pdf_previewer = 'open -a Preview %S';
-} elsif ($^O eq 'linux') {
-    $pdf_previewer = 'evince';
-}
-$preview_continuous_mode = 1;
-$pdf_mode = 3;
-$pdf_update_method = 4;
+$pdf_mode = 3; # use dvipdf
+$pdf_update_method = 2;
+$pdf_previewer = "start mupdf %O %S";
+$max_repeat       = 5;
+# Prevent latexmk from removing PDF after typeset.
+$pvc_view_file_via_temporary = 0;

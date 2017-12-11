@@ -14,6 +14,10 @@ call deoplete#custom#set('jedi', 'matchers', ['matcher_fuzzy'])
 call deoplete#custom#set('neosnippet', 'disabled_syntaxes', ['goComment'])"
 call deoplete#custom#set('ternjs', 'rank', 0)
 call deoplete#custom#set('vim', 'disabled_syntaxes', ['Comment'])
+"if !exists('g:deoplete#omni#input_patterns')
+"  let g:deoplete#omni#input_patterns = {}
+"endif
+"let g:deoplete#omni#input_patterns.tex = g:vimtex#re#deoplete
 " for deocomplete
 " 補完を選択しpopupを閉じるV
 inoremap <expr><C-y> deoplete#close_popup()
