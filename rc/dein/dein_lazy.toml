@@ -22,6 +22,15 @@ on_source   = ['deoplete.nvim']
 #depends     = ['neosnippet-snippets']
 
 [[plugins]]
+repo        = 'Shougo/deol.nvim'
+on_cmd      = 'Deol'
+on_source   = 'denite.nvim'
+hook_add    = '''
+  nnoremap <C-n> :call deol#new({'command': 'fish'})<Cr>
+  nnoremap <Space>d :Deol<Cr>
+'''
+
+[[plugins]]
 repo        = 'cespare/vim-toml'
 on_ft       = 'toml'
 
