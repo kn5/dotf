@@ -20,6 +20,9 @@ repo      = 'roxma/vim-hug-neovim-rpc'
 if        = '!has("nvim") && has("python3")'
 # }}}
 
+[[plugins]]
+repo      = 'Shougo/deol.nvim'
+
 # linter 
 [[plugins]]
 repo      = 'w0rp/ale'
