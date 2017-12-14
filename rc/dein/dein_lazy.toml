@@ -16,10 +16,11 @@ hook_source = 'source ~/.config/nvim/rc/plugins/plugins-deoplete.vim'
 repo        = 'zchee/deoplete-jedi'
 on_source   = ['deoplete.nvim']
 
-#[[plugins]]
-#repo        = 'Shougo/neosnippet'
-#on_i        = 1
-#depends     = ['neosnippet-snippets']
+[[plugins]]
+repo        = 'Shougo/neosnippet'
+on_i        = 1
+depends     = ['neosnippet-snippets']
+hook_source = 'source ~/.config/nvim/rc/plugins/plugins-neosnippet.vim'
 
 [[plugins]]
 repo        = 'Shougo/deol.nvim'
@@ -37,10 +38,6 @@ on_ft       = 'toml'
 [[plugins]]
 repo        = 'kballard/vim-fish'
 on_ft       = 'fish'
-
-#[[plugins]]
-#repo        = 'kn5/Pretty-Vim-Python'
-#on_ft       = 'python'
 
 [[plugins]]
 repo        = 'tpope/vim-markdown'

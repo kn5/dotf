@@ -4,7 +4,7 @@ nnoremap m <Nop>
 nnoremap , <Nop>
 
 inoremap <C-j> <esc> 
-inoremap <C-f> <C-x><C-o>
+inoremap <C-f> <tab>
 noremap <Space>h ^
 noremap <Space>l $
 nnoremap <esc><esc> :noh<Cr> 
