@@ -1,7 +1,6 @@
 # Required:
 [[plugins]]
 repo      = 'Shougo/dein.vim'
-hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-dein.vim'
 
 [[plugins]] repo      = 'Shougo/vimproc.vim'
 build     = 'make'
