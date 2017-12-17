@@ -27,7 +27,7 @@ repo        = 'Shougo/deol.nvim'
 on_cmd      = 'Deol'
 on_source   = 'denite.nvim'
 hook_add    = '''
-  nnoremap <C-n> :call deol#new({'command': 'fish'})<Cr>
+  nnoremap <Space>n :call deol#new({'command': 'fish'})<Cr>
   nnoremap <Space>d :Deol<Cr>
 '''
 

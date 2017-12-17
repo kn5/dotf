@@ -19,6 +19,7 @@ fish_vi_key_bindings
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin/ $PATH
 set -x TERM xterm-256color
+set -x WORKON_HOME $HOME/.virtualenvs
 
 alias vi='~/my_local/homebrew/bin/vim'
 alias mv='mv -i'

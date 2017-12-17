@@ -9,6 +9,7 @@ done
 
 mkdir -p $HOME/.config/fish
 ln -is $HOME/dotf/config.fish $HOME/.config/fish/config.fish
+ln -is $HOME/dotf/config.fish $HOME/config.fish
 
 mkdir -p $HOME/.config/nvim
 mkdir -p $HOME/.vim

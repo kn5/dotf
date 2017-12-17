@@ -26,10 +26,9 @@ export PATH=$HOME/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export HOMEBREW_CACHE=$HOME/my_local/homebrew/cache
 export XDG_CONFIG_HOME=$HOME/.config
+export WORKON_HOME=$HOME/.virtualenvs
 PYENV_ROOT=~/.pyenv
 export PATH=$PATH:$PYENV_ROOT/bin
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 export TERM=xterm-256color
 if [ -x "`which go`" ]; then
   export GOROOT=`go env GOROOT`

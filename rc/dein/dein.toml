@@ -36,6 +36,10 @@ repo      = 'easymotion/vim-easymotion'
 hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-easymotion.vim'
 
 [[plugins]]
+repo      = 'junegunn/vim-easy-align'
+hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-vim-easy-align.vim'
+
+[[plugins]]
 repo      = 'scrooloose/nerdtree'
 hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-nerdtree.vim'
 

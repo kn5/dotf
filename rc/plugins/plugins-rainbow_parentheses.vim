@@ -1,7 +1,3 @@
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
 let g:rbpt_colorpairs = [
       \ ['blue',       '#FF6000'],
       \ ['cyan', '#00FFFF'],
