@@ -29,7 +29,7 @@ alias v=nvim
 alias vim='nvim'
 alias sc='screen'
 alias ps='ps --sort=start_time'
-alias ps='ps --sort=start_time'
+alias c='clear'
 
 alias mecabi='mecab -d /Users/kengo-ue/local/lib/mecab/dic/mecab-ipadic-neologd -F"%f[6] " -U"%m " -E"\n" -b 819200'
 alias mecabwakati='mecab -d /Users/kengo-ue/local/lib/mecab/dic/mecab-ipadic-neologd -Owakati -E"\n" -b 819200'
