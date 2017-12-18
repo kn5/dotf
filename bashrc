@@ -29,8 +29,15 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PYENV_ROOT=~/.pyenv
 export PATH=$PATH:$PYENV_ROOT/bin
 export TERM=xterm-256color
-if [ -x "`which go`" ]; then
+
+if type go 2>/dev/null 1>/dev/null
+then
   export GOROOT=`go env GOROOT`
   export GOPATH=$HOME/code/go-local
   export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+fi
+
+if type powerline-daemon 2>/dev/null 1>/dev/null
+then
+  powerline-daemon -q
 fi
