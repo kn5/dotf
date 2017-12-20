@@ -9,3 +9,11 @@ options     head
   import chainer.functions as F
   import chainer.links as L
   from chainer.training import extensions
+
+snippet     importrandom
+abbr        random.seed(0),: ...
+options     head
+  random.seed(0)
+  numpy.random.seed(0)
+  if chainer.cuda.available:
+    chainer.cuda.cupy.random.seed(0)

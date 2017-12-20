@@ -22,3 +22,13 @@ let g:rbpt_colorpairs = [
       \ ['White',         '#c0c0c0'],
       \ ]
 let g:rbpt_max = 21
+
+aug MyParentheses
+  au!
+  au VimEnter * RainbowParenthesesToggle
+  au Syntax * RainbowParenthesesLoadRound
+  au Syntax * RainbowParenthesesLoadSquare
+  au Syntax * RainbowParenthesesLoadBraces
+aug END
+" if RainbowParentheses is deactivated, press <Space>r to activate
+nnoremap <Space>r :RainbowParenthesesLoadRound<Cr>:RainbowParenthesesLoadBraces<Cr>:RainbowParenthesesLoadSquare<Cr>

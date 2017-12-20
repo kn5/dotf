@@ -54,16 +54,21 @@ hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-vim-fugitive.vim'
 
 # plguins for view {{{
 [[plugins]]
-repo      = 'kien/rainbow_parentheses.vim'
-hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-rainbow_parentheses.vim'
-
-[[plugins]]
 repo      = 'ryanoasis/vim-devicons'
 hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-vim-devicons.vim'
 
 [[plugins]]
 repo      = 'tiagofumo/vim-nerdtree-syntax-highlight'
 
+#[[plugins]]
+#repo      = 'itchyny/landscape.vim'
+#hook_add  = 
+#'''
+#  aug MyColorScheme
+#    au!
+#    au VimEnter * nested colorscheme landscape
+#  aug END
+#'''
 [[plugins]]
 repo      = 'itchyny/landscape.vim'
 hook_add  = 
@@ -78,4 +83,7 @@ hook_add  =
 repo      = 'itchyny/lightline.vim'
 hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-lightline.vim'
 
+[[plugins]]
+repo      = 'kien/rainbow_parentheses.vim'
+hook_add  = 'source ~/.config/nvim/rc/plugins/plugins-rainbow_parentheses.vim'
 # }}}
