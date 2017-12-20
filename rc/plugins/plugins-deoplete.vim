@@ -23,9 +23,7 @@ inoremap <expr><C-y> deoplete#close_popup()
 " 補完をキャンセルしpopupを閉じる
 inoremap <expr><C-e> deoplete#cancel_popup()
 " TABで補完できるようにする
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" :
-  \ neosnippet#expandable_or_jumpable() ?
-  \ "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
+imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
 " undo
 inoremap <expr><C-g> deoplete#undo_completion()
 " 補完候補の共通部分までを補完する
