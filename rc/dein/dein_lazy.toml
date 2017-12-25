@@ -2,8 +2,7 @@
 repo        = 'Shougo/unite.vim'
 on_source   = ['vimshell.vim']
 
-[[plugins]]
-repo        = 'davidhalter/jedi-vim'
+[[plugins]] repo        = 'davidhalter/jedi-vim'
 on_ft       = 'python'
 
 [[plugins]]
@@ -38,6 +37,10 @@ on_ft       = 'toml'
 [[plugins]]
 repo        = 'kballard/vim-fish'
 on_ft       = 'fish'
+
+[[plugins]]
+repo        = 'vim-python/python-syntax'
+on_ft       = 'python'
 
 [[plugins]]
 repo        = 'tpope/vim-markdown'
