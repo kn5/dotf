@@ -10,6 +10,8 @@ options     head
 	import chainer.functions as F
 	import chainer.links as L
 	from chainer.training import extensions
+	import argparse
+	import pickle
 
 snippet     importrandom
 abbr        random.seed(0),: ...
@@ -38,3 +40,23 @@ snippet     df
 abbr        df = pd.read_csv(FILENAME) ...
 options     head
 	df = pd.read_csv("${1:#:file_path}", sep=${0:"\t"})
+
+snippet     parser
+abbr        parser = argparse.ArgumentParser() ...
+options     head
+	parser = argparse.ArgumentParser()
+	parser.add_argument('--gpu', dest='gpu', type=int, default=-1)
+	parser.add_argument('--traindata', dest='traindata', type=str, default='${1:#:traindata_path}')
+	parser.add_argument('--devdata', dest='devdata', type=str, default='${2:#:devdata_path}')
+	parser.add_argument('--testdata', dest='testdata', type=str, default='${3:#:testdata_path}')
+	parser.add_argument('--batchsize', dest='batchsize', type=int, default='${4:#:batchsize}')
+	parser.add_argument('--epoch', dest='epoch', type=int, default='${5:#:epoch}')
+	args = parser.parse_args()
+
+	# GPU
+	if args.gpu != -1:
+		cuda.get_device(args.gpu).use()
+		from chainer.cuda import cupy
+		xp = cupy
+	else:
+		xp = np
