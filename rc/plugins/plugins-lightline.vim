@@ -26,8 +26,6 @@ let g:lightline = { 'colorscheme': 'landscape',
         \   'gitgutter': 'MyGitGutter',
         \   'ale': 'ALEGetStatusLine',
         \ },
-        \ 'separator': {'left': '⮀', 'right': '⮂'},
-        \ 'subseparator': {'left': '⮁', 'right': '⮃'}
         \ }
 
 

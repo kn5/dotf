@@ -29,6 +29,11 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PYENV_ROOT=~/.pyenv
 export PATH=$PATH:$PYENV_ROOT/bin
 export TERM=xterm-256color
+complete -cf sudo
+alias pbcopy='xsel --clipboard --input'
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 if type go 2>/dev/null 1>/dev/null
 then

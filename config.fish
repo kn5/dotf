@@ -80,6 +80,6 @@ alias phi=peco_select_history
 eval (pyenv init - | source)
 eval (pyenv virtualenv-init - | source)
 
-if not [ $TMUX ]
-  tmux -2 new-session
-end
+#if not [ $TMUX ]
+#  tmux -2 new-session
+#end
